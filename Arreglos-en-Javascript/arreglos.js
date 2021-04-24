@@ -53,5 +53,22 @@ console.log(autos[3]);
 
     // En este caso, "cadillac" fue sustituido por "fuego" ya que lo señalamos en el índice del arreglo o array
 
-    
+    console.log(autos.length);
 
+    autos[6]='pickup';
+    console.log(autos);
+
+
+    // Preguntar si es un Array
+
+    //Ejemplo de como no nos dice si es un arreglo, manera errada
+    console.log(typeof autos);
+
+    //Ejemplo de como nos indica si es un array, manera CORRECTA
+    console.log(Array.isArray(autos));
+    //Y asi nos indica que es verdadero 
+
+    //Otra forma de preguntar: Diciendo si autos es una instancia de autos.
+    console.log(autos instanceof Array);
+
+    
