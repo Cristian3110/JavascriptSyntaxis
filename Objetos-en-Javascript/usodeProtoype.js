@@ -24,3 +24,7 @@ console.log(padre.telefono);
 let madre = new persona('Carmen', 'Cegarra', 'aurora33@hotmail.com');
 console.log(madre);
 console.log(madre.telefono);
+
+
+
+
