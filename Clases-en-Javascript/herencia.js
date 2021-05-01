@@ -40,6 +40,13 @@ class Empleado extends Persona{
         set departamento(departamento){
             this._departamento = departamento;
         }
+        // Sobreescritura en Javascript
+        // Debe ser el mismo nombre que el q está en la clase padre
+        nombreCompleto(){
+            //return this._nombre + ' ' + this._apellido + ' ' + this._departamento;
+            // Se coloca la instancia Super con el método instanciado en la clase padre
+            return super.nombreCompleto() + ' ' + this._departamento;
+        }
 }
 
 // Creando un objeto en Persona
@@ -54,8 +61,9 @@ console.log(empleado1);
 console.log(empleado1.nombre);
 
 // ejecutando el SET para modificar el nombre original por el asignado
-empleado1.nombre = 'alejandro';
+empleado1.nombre = 'Alejandro';
 console.log(empleado1.nombre);
 
-//Accediendo al nombre completo
+//Accediendo al nombre completo que es una función
+// 
 console.log(empleado1.nombreCompleto());
