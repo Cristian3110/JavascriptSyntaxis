@@ -20,6 +20,9 @@ class Persona {
     set apellido (apellido){
         this._apellido = apellido;
     }
+    nombreCompleto(){
+        return this._nombre + ' ' + this._apellido;
+    }
 }
 
 // Heredando con la palabra EXTENDS en javascript
@@ -53,3 +56,6 @@ console.log(empleado1.nombre);
 // ejecutando el SET para modificar el nombre original por el asignado
 empleado1.nombre = 'alejandro';
 console.log(empleado1.nombre);
+
+//Accediendo al nombre completo
+console.log(empleado1.nombreCompleto());
