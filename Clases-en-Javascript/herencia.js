@@ -2,6 +2,8 @@
  * Herencia en Javascript
  **************************/
 
+
+
 class Persona {
 
     constructor(nombre, apellido){
@@ -22,6 +24,15 @@ class Persona {
     }
     nombreCompleto(){
         return this._nombre + ' ' + this._apellido;
+    }
+    /*****************************************
+     * Sobreescribiendo el método toString()
+     * Sobreescribiendo el metodo de la clase Padre (object)
+     ****************************************/
+    toString(){
+        // Se aplica polimorfismo en este código (multiples formas en tiempo de ejecución)
+        // el método que se ejecuta depende del tipo de referencia de clase Padre o Hija
+        return this.nombreCompleto();
     }
 }
 
@@ -67,3 +78,15 @@ console.log(empleado1.nombre);
 //Accediendo al nombre completo que es una función
 // 
 console.log(empleado1.nombreCompleto());
+
+/************************************************************************************
+ * Clase Object, Metodo toString.
+ * Sobreescritura y Polimorfismo en Javascript
+ ***********************************************************************/
+
+// Este método se llama como Polimorfismo
+// Se hace un llamado a una instancia de la clase hija
+console.log(empleado1.toString());
+
+// Se hace un llamado a una instancia de la clase padre
+console.log(persona1.toString());
