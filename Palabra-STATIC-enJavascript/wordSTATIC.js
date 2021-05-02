@@ -1,10 +1,11 @@
-/*************************
- * Herencia en Javascript
- **************************/
-
+/******************************************************************
+ * Palabra STATIC en javascript, utilizandolas en bas de las clases
+ ******************************************************************/
 
 
 class Persona {
+
+    
 
     constructor(nombre, apellido){
         this._nombre = nombre;
@@ -25,29 +26,24 @@ class Persona {
     nombreCompleto(){
         return this._nombre + ' ' + this._apellido;
     }
-    /*****************************************
-     * Sobreescribiendo el método toString()
-     * Sobreescribiendo el metodo de la clase Padre (object)
-     ****************************************/
+   
     toString(){
-        // Se aplica polimorfismo en este código (multiples formas en tiempo de ejecución)
-        // el método que se ejecuta depende del tipo de referencia de clase Padre o Hija
+        
         return this.nombreCompleto();
     }
-    /*********************
-     * Palabra STATIC
-     ********************/
+   
     static saludar(){
         console.log('Saludos desde método stactic');
     }
+
+    static saludar2(persona){
+        console.log(persona.nombre + ' ' + persona.apellido);
+    }
 }
 
-// Heredando con la palabra EXTENDS en javascript
 class Empleado extends Persona{
 
-    // declaramos en el contructor los parámetros de la clase padre
         constructor(nombre, apellido, departamento){
-            // hacer un llamado al constructor de la clase padre
             super(nombre, apellido);
             this._departamento = departamento;
         }
@@ -57,14 +53,11 @@ class Empleado extends Persona{
         set departamento(departamento){
             this._departamento = departamento;
         }
-        // Sobreescritura en Javascript
-        // Debe ser el mismo nombre que el q está en la clase padre
         nombreCompleto(){
-            //return this._nombre + ' ' + this._apellido + ' ' + this._departamento;
-            // Se coloca la instancia Super con el método instanciado en la clase padre
             return super.nombreCompleto() + ' ' + this._departamento;
         }
 }
+
 
 // Creando un objeto en Persona
 let persona1 = new Persona('José','Carrillo');
@@ -101,4 +94,11 @@ console.log(persona1.toString());
 // persona1.saludar();
 
 Persona.saludar();
+
+Persona.saludar2(persona1);
+
+// llamando el método desde la clase empleado
+Empleado.saludar();
+Empleado.saludar2(empleado1);
+// Se reflejan desde nuestras clases y no desde los objetos
 
