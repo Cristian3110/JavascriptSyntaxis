@@ -6,7 +6,9 @@
 class Persona {
 
     // Atributo estático
-    static contadorObjetosPersona = 0;
+    static contadorObjetosPersona = 0; // atributos de nuestra clase
+
+    email = 'valor default email'; // atributo de nuestros objetos
 
     constructor(nombre, apellido){
         this._nombre = nombre;
@@ -114,3 +116,10 @@ console.log(Persona.contadorObjetosPersona);
 console.log(Empleado.contadorObjetosPersona);
 
 // Cada vez que pasa por el contructor se incrementa el contador de creación de objetos
+
+// Las clases hijas y padres lo tienen
+console.log(persona1.email);
+console.log(empleado1.email);
+
+//Es undefined ya que no se ha creado como atributo estático y no tiene relación con la Clase
+console.log(Persona.email);
