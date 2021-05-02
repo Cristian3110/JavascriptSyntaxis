@@ -5,11 +5,13 @@
 
 class Persona {
 
-    
+    // Atributo estático
+    static contadorObjetosPersona = 0;
 
     constructor(nombre, apellido){
         this._nombre = nombre;
         this._apellido = apellido;
+        Persona.contadorObjetosPersona++;
     }
     get nombre (){
         return this._nombre;
@@ -63,6 +65,9 @@ class Empleado extends Persona{
 let persona1 = new Persona('José','Carrillo');
 console.log(persona1); // get persona
 
+let persona2 = new Persona('Carmen','Cegarra');
+console.log(persona2);
+
 // Creando el objeto de tipo empleado, con los atributos heredados de la clase padre
 let empleado1 = new Empleado('Mariana','Alcalá','Sistemas');
 console.log(empleado1);
@@ -102,3 +107,10 @@ Empleado.saludar();
 Empleado.saludar2(empleado1);
 // Se reflejan desde nuestras clases y no desde los objetos
 
+// trayendo el valor de nuestro atributo estático
+console.log(persona1.contadorObjetosPersona);
+console.log(Persona.contadorObjetosPersona);
+
+console.log(Empleado.contadorObjetosPersona);
+
+// Cada vez que pasa por el contructor se incrementa el contador de creación de objetos
