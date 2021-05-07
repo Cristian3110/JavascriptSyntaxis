@@ -8,10 +8,22 @@
     // Atributo estático
     static contadorPersona = 0; // atributos de nuestra clase
 
+    // Nuevo método estático, simulación del máx que se puede crear en objetos
+    static get MAX_OBJ(){
+        return 5;
+    }
+
+
     constructor(nombre, apellido){
         this._nombre = nombre;
         this._apellido = apellido;
-        this.idPersona = ++Persona.contadorPersona;
+        // podemos colocar para que no agregue más de 5 objetos
+        if(Persona.contadorPersona < Persona.MAX_OBJ){
+            
+            this.idPersona = ++Persona.contadorPersona;
+        }else{
+            console.log('Se han superado el máximo de objetos permitidos');
+        }
     }
     get nombre (){
         return this._nombre;
@@ -74,3 +86,17 @@ console.log(Persona.contadorPersona);
 let persona2 = new Persona('Nemecio', 'Carrillo');
 console.log(persona2.toString());
 
+console.log(Persona.MAX_OBJ);
+
+Persona.MAX_OBJ = 10;
+
+console.log(Persona.MAX_OBJ);
+
+let persona3 = new Persona('wilfredo', 'patiño');
+let persona4 = new Persona('Alejandra', 'Berrios');
+// con este siguiente objeto ya rebaza el máx de objetos que se podian crear
+let persona5 = new Persona('josé', 'alcala');
+
+console.log(persona3.toString());
+console.log(persona4.toString());
+console.log(persona5.toString());
