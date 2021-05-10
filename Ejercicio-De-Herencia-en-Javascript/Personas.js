@@ -10,7 +10,7 @@ class Personas {
     constructor(nombre, apellido, edad){
 
 
-        this._idPersonas = ++contadorPersonas;
+        this._idPersona = ++contadorPersonas;
         this._nombre = nombre;
         this._apellido = apellido;
         this._edad = edad;
@@ -18,7 +18,7 @@ class Personas {
     }
 
     get idPersona(){
-        return this._idPersonas;
+        return this._idPersona;
     }
 
     get nombre(){
@@ -46,7 +46,7 @@ class Personas {
     }
     
     toString(){
-        return `${this._idPersonas} ${this._nombre} ${this._apellido} ${this._edad}`;
+        return `${this._idPersona} ${this._nombre} ${this._apellido} ${this._edad}`;
     }
 
 }
