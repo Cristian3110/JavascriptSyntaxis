@@ -59,9 +59,9 @@ class Personas {
 
     static contadorEmpleados = 0;
 
-    constructor(sueldo){
+    constructor(nombre, apellido, edad, sueldo){
         
-        
+        super(nombre, apellido, edad);
         this._idEmpleado = ++Empleados.contadorEmpleados;
         this._sueldo = sueldo;
     }
@@ -89,10 +89,9 @@ class Personas {
 
     static contadorClientes = 0;
     
-    constructor(fechaRegistro){  
+    constructor(nombre, apellido, edad, fechaRegistro){  
 
-        let fechaIngreso = new Date();
-
+        super(nombre, apellido, edad);
         this._idCliente = ++Clientes.contadorClientes;
         this._fechaRegitro = fechaRegistro;
 
@@ -108,14 +107,31 @@ class Personas {
     }
 
     set fechaRegistro(fechaRegistro){
-        return this._fechaRegitro =fechaRegistro;
+        return this._fechaRegitro = fechaRegistro;
     }
 
     toString(){
-        return `${super.toString()} ${this._idCliente} ${this._fecha}`;
+        return `${super.toString()} ${this._idCliente} ${this._fechaRegistro}`;
     }
 
 }
 
 
+let persona1 = new Personas('cristian','carrillo',33);
+console.log(persona1.toString());
 
+let persona2 = new Personas('Carmen', 'Cegarra', 61);
+console.log(persona2.toString());
+
+let empleado1 = new Empleados('Nemecio', 'Carrillo', 65, 5000);
+console.log(empleado1.toString());
+
+let empleado2 = new Empleados('Maricarmen', 'Carrillo', 23, 7000);
+console.log(empleado2.toString());
+
+// Verificar el detalle de la fecha convirtiendola con una librería
+let cliente1 = new Clientes('Angel', 'Delgado', 4, new Date());
+console.log(cliente1.toString());
+
+let cliente2 = new Clientes ('Alejandra', 'Peñalosa', 25, new Date());
+console.log(cliente2.toString());
