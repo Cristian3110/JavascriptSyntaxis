@@ -40,6 +40,28 @@ class Producto {
 }
 
 
+class Orden {
+
+    static contadorOrdenes = 0;
+
+    static get MAX_PRODUCTOS(){
+        return 5;
+    }
+
+    constructor(){
+
+        this._idOrden = ++Orden.contadorOrdenes;
+        this._productos = [];
+        
+        
+    }
+
+
+
+
+}
+
+
 let producto1 = new Producto('Patalón',500);
 let producto2 = new Producto('Camisa',300);
 
