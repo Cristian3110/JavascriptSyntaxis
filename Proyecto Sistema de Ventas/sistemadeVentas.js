@@ -52,7 +52,8 @@ class Orden {
 
         this._idOrden = ++Orden.contadorOrdenes;
         this._productos = [];
-        this._contadorProductosAgregados = 0;
+        // La variable conatdorProductoAgregados no se está utilizando por ende se puede comentar
+        // this._contadorProductosAgregados = 0;
     }
 
     get idOrden(){
@@ -64,13 +65,14 @@ class Orden {
             this._productos.push(producto);
             //this.producto[this._contadorProductosAgregados++] = producto;
         } else {
-            console.log('No se pueden agregar más productos')
+            console.log('No se pueden agregar más productos, tiene un máximo de 5 por orden')
         }
     }
 
     calcularTotal(){
         
         let totalVenta = 0;
+        // recorriendo el array
         for(let producto of this._productos){
             totalVenta += producto.precio; // totalVenta = totalVenta + producto.precio
         }
@@ -80,10 +82,10 @@ class Orden {
     mostrarOrden(){
         let productosOrden = '';
         for(let producto of this._productos){
-            productosOrden += producto.toString() + ' ';
+            productosOrden += '\n{' + producto.toString() + '$ } ';
         }
 
-        console.log(`Orden: ${this._idOrden} Total: ${this.calcularTotal()}, Productos: ${productosOrden}`)
+        console.log(`Orden: ${this._idOrden} Total:  $${this.calcularTotal()}, Productos: ${productosOrden}`)
     }
 
 }
@@ -92,10 +94,32 @@ class Orden {
 let producto1 = new Producto('Patalón',500);
 let producto2 = new Producto('Camisa',300);
 
-console.log(producto1.toString());
-console.log(producto2.toString());
+// console.log(producto1.toString());
+// console.log(producto2.toString());
 
+// creando otro objeto de tipo Orden
 
+let orden1 = new Orden();
+//agregando productos a nuestra orden
+orden1.agregarProductos(producto1);
+orden1.agregarProductos(producto2);
+
+orden1.mostrarOrden();
+
+let orden2 = new Orden();
+// agregando una nueva orden
+let producto3 = new Producto('Zapatos', 150);
+let producto4 = new Producto('Gorra', 50);
+orden2.agregarProductos(producto3);
+orden2.agregarProductos(producto4);
+orden2.agregarProductos(producto1);
+orden2.agregarProductos(producto3);
+orden2.agregarProductos(producto4);
+//Hasta aqui es el límite de productos por orden por la condición realizada
+orden2.agregarProductos(producto2);
+
+// Mostrando la 2da orden
+orden2.mostrarOrden();
 
 
 
