@@ -41,6 +41,10 @@ class DispositivoEntrada {
 let dispositivo1 = new DispositivoEntrada('teclado','VIT');
 console.log(dispositivo1.toString());
 
+
+
+
+
 class Raton extends DispositivoEntrada {
 
     static contadorRatones = 0;
@@ -56,13 +60,43 @@ class Raton extends DispositivoEntrada {
     }
 
     toString(){
-        return ` ${super.toString()} ${this._idRaton}`
+        return ` ${super.toString()} idRatón: ${this._idRaton}`
     }
 }
 
 let raton1 = new Raton('Mouse','Genius');
 console.log(raton1.toString());
 
+let raton2 = new Raton('Mouse', 'Hp');
+console.log(raton2.toString());
 
 
+
+
+
+class Teclado extends DispositivoEntrada {
+
+    static contadorTeclado = 0;
+
+    constructor(tipoEntrada,marca){
+
+        super(tipoEntrada,marca);
+        this._idTeclado = ++Teclado.contadorTeclado;
+        
+    }
+
+    get idTeclado(){
+        return this._idTeclado;
+    }
+
+    toString(){
+        return `${super.toString()} idteclado: ${this._idTeclado} `
+    }
+}
+
+let teclado1 = new Teclado('Teclado','Máximus');
+console.log(teclado1.toString());
+
+let teclado2 = new Teclado('Teclado','Dell');
+console.log(teclado2.toString());
 
