@@ -13,6 +13,10 @@ class DispositivoEntrada {
         this._marca = marca;
     }
 
+    get contadorOrdenes(){
+        return this._contadorOrdenes;
+    }
+
     get tipoEntrada (){
         return this._tipoEntrada;
     }
@@ -28,5 +32,37 @@ class DispositivoEntrada {
     set marca (marca){
         return this._marca = marca;
     }
-    
+
+    toString(){
+        return `Orden: ${this._contadorOrdenes} Tipo de Entrada: ${this._tipoEntrada} Marca: ${this._marca}`
+    }
 }
+
+let dispositivo1 = new DispositivoEntrada('teclado','VIT');
+console.log(dispositivo1.toString());
+
+class Raton extends DispositivoEntrada {
+
+    static contadorRatones = 0;
+
+    constructor(tipoEntrada, marca){
+
+        super(tipoEntrada, marca);
+        this._idRaton = ++Raton.contadorRatones;
+    }
+
+    get idRaton(){
+        return this._idRaton;
+    }
+
+    toString(){
+        return ` ${super.toString()} ${this._idRaton}`
+    }
+}
+
+let raton1 = new Raton('Mouse','Genius');
+console.log(raton1.toString());
+
+
+
+
