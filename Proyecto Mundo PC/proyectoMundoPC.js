@@ -100,3 +100,46 @@ console.log(teclado1.toString());
 let teclado2 = new Teclado('Teclado','Dell');
 console.log(teclado2.toString());
 
+
+class Monitor {
+
+    static contadorMonitores = 0;
+    
+    constructor(marca, size){
+
+        this._idMonitor = ++Monitor.contadorMonitores;
+        this._marca = marca;
+        this._size = size;
+    }
+
+    get idMonitor(){
+        return this.idMonitor;
+    }
+
+    get marca(){
+        return this.marca;
+    }
+
+    set marca(marca){
+        return this._marca = marca;
+    }
+
+    get size(){
+        return this._size;
+    }
+
+    set size(size){
+        return this._size = size;
+    }
+
+    toString(){
+        return ` idMonitor: ${this._idMonitor} Marca: ${this._marca} Tamaño: ${this._size} pulgadas`;
+    }
+}  
+
+let monitor1 = new Monitor('Samsung',25); 
+console.log(monitor1.toString());
+
+
+
+
