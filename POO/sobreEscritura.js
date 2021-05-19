@@ -29,13 +29,21 @@ class Gerente extends Empleado{
     }
 }
 
+/** ***********************************************************************************************************
+ * Polimorfismo: Con el siguiente método vamos a poder realizar con un solo método, realizar multiples formas
+ * o multiples acciones, ya ses para llamar algún método de la clase padre o hija.
+*****************************************************************************************/
+
+function imprimir(tipo){
+    // Depende del tipo va a imprimri el detalle de la clase padre o hija
+    console.log(tipo.obtenerDetalles());
+}
+
 let empleado1 = new Empleado('Nemecio', 3000);
-console.log(empleado1.obtenerDetalles());
-
-
 let gerente1 = new Gerente('Carmen',1500,'Educación Especial');
-console.log(gerente1);
 
-console.log(gerente1.obtenerDetalles());
+//console.log(gerente1.obtenerDetalles());
 // No se refleja el detalle en el objeto creado de departamento, entonces realizamos la sobreescritura
 
+imprimir(empleado1);
+imprimir(gerente1);
