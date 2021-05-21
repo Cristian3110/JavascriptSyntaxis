@@ -20,3 +20,4 @@ catch(error){
 finally{
     console.log('Termina revisión de errores');
 }
+
