@@ -60,7 +60,3 @@ const multiplicacion = (num1,num2)=>{
     return resultado;
 }
 console.log(multiplicacion(5,6));
-
-
-
-
