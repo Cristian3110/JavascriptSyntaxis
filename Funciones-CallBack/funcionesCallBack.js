@@ -31,6 +31,25 @@ function sumar(op1,op2, funcionCallBack){
 
 sumar(5,3,imprimir);
 
+/**
+ * Llamadas asíncronas con el uso de setTimeout
+ * Con ésta función podemos hacer variantes en el tiempo en la ejecución de funciones.
+ * 
+ */
+
+function funcionTipoCallback (){
+    console.log('Saludo asíncrono después de 3 seg');
+}
+
+setTimeout(funcionTipoCallback,3000); //Después de 3 segundos
+
+setTimeout(function(){console.log('Saludo 2 con 5 segundos')},5000);
+
+setTimeout(() => {
+   console.log('Una función setTimeout a los 8 seg'); 
+}, 8000);
+
+setTimeout(() => console.log('Ahora asíncrono con 10 seg'), 10000);
 
 
 
