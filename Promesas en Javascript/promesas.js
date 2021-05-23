@@ -19,3 +19,14 @@ miPromesa.then(valor => console.log(valor), error=> console.log(error));
 //En el caso de CATCH
 miPromesa.then(valor =>console.log(valor)).catch(error=>console.log(error));
 
+
+ //Otro ejemplo:
+ 
+let promesa1 = new Promise((resolve=>{
+    console.log('Inicio de la Promesa')
+    setTimeout(()=> resolve('Saludos desde Promesa1 y timeout a los 3seg'),3000);
+    console.log('Fin de la promesa')
+}));
+
+promesa1.then(valor1 => console.log(valor1));
+ 
