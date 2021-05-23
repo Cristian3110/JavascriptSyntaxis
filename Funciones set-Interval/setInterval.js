@@ -1,0 +1,16 @@
+/***************************************************
+ * Funciones setInterval para peticiones asíncronas
+ * manda a llamar la función cada cierto tiempo
+ ***************************************************/
+
+let reloj = ()=>{
+    let fecha = new Date();
+    console.log(`${fecha.getHours()}: ${fecha.getMinutes()} ${fecha.getSeconds()}`);
+}
+
+setInterval(reloj, 1000); // 1 segundo
+
+
+
+
+
