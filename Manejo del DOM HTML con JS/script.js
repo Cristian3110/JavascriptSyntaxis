@@ -10,3 +10,6 @@ console.log(`El valor del cabecero es: ${cabecero}`);
 
 let parrafo = document.getElementById('parrafo').innerHTML;
 console.log(`El valor del parrafo es: ${parrafo}`);
+
+// parrafo.innerHTML = 'Nuevo Valor del Parrafo, modificado';
+// cabecero.innerHTML = 'Nuevo cabecero';
