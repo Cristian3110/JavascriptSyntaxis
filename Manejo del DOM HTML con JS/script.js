@@ -13,3 +13,15 @@ console.log(`El valor del parrafo es: ${parrafo}`);
 
 // parrafo.innerHTML = 'Nuevo Valor del Parrafo, modificado';
 // cabecero.innerHTML = 'Nuevo cabecero';
+
+/**********************************************************
+ * Otra manera de recuperar elementos desde JS por grupo
+ * Recuperando un grupo de etiquetas en el DOM
+ * getElementsByTagName
+ *******************************************************/
+
+let parrafos = document.getElementsByTagName('p');
+console.log(`N°- párrafos: ${parrafos.length}`)
+for(let i=0; i<parrafos.length; i++){
+    console.log(`${i} - ${parrafos[i].innerHTML}`);
+}
