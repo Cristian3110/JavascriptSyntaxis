@@ -32,11 +32,22 @@ for (let i = 0; i < elementos.length; i++) {
   console.log(`${i} - ${elementos[i].innerHTML}`);
 }
 
-console.log('----------------------------')
+console.log("----------------------------");
 
 // Otra manera de recorrer los elementos con el for off
 let elementosF = document.getElementsByClassName("azul");
-for(let elementosF of elementos){
-    console.log(`${elementosF.innerHTML}`);
+console.log( `N° elementos: ${elementosF.length}`);
+for (let elemento of elementosF) {
+  console.log(`${elemento.innerHTML}`);
 }
 // console.log(`N°- elementosF: ${elementosF.length}`);
+console.log('--------------------------')
+
+// recuperando los elementos con el método querySelectorAll
+let elementosQS = document.querySelectorAll('h1.azul');
+console.log( `N° elementos: ${elementosQS.length}`);
+for (let elemento of elementosQS) {
+  console.log(`${elemento.innerHTML}`);
+}
+
+
