@@ -20,3 +20,11 @@ function viejoNuevo(){
 function cambioImg(){
     document.getElementById('imagen').src = '/Manejo del DOM desde JS/access/html5.png'
 }
+
+/****************************************************
+ * Cambiando los estilos CSS con JS
+ **********************************************/
+
+function cambioColor(){
+    document.getElementById('titulo').style.color = '#2a9d8f'
+}
