@@ -16,3 +16,7 @@ function modificar()    {
 function viejoNuevo(){
     document.getElementById('elemento').innerHTML += '<br/> Elemento modificado con el Anterior'
 }
+
+function cambioImg(){
+    document.getElementById('imagen').src = '/Manejo del DOM desde JS/access/html5.png'
+}
