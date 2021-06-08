@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Manejo del DOM HTML con JS</title>
+  </head>
+  <body>
+    <!--el apuntador THIS apunta al objeto H1 para modificar su contenido-->
+    <!--no es recomendable colocar el código dentro de la etiqueta h1 sino realizar un llamadp-->
+    <!--al método, como lo veremos a continuación, se comentará el código anterior-->
+    <!-- <h1 onclick="this.innerHTML ='Para cambiar el Titulo'">Manejo del DOM HTML con Javascript</h1> -->
+    <h1 onclick="cambiarTexto(this)">
+      Manejo del DOM HTML con Javascript
+    </h1>
+    <br />
+    <button onclick="mostrar()">Mostrar</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
