@@ -18,10 +18,12 @@
     <!--no es recomendable colocar el código dentro de la etiqueta h1 sino realizar un llamadp-->
     <!--al método, como lo veremos a continuación, se comentará el código anterior-->
     <!-- <h1 onclick="this.innerHTML ='Para cambiar el Titulo'">Manejo del DOM HTML con Javascript</h1> -->
-    <h1 onclick="cambiarTexto(this)">
-      Manejo del DOM HTML con Javascript
-    </h1>
+    <h1 onclick="cambiarTexto(this)">Manejo del DOM HTML con Javascript</h1>
+    <!--Este elemento ahora será dominado totalmente desde JS-->
+    <h1 id="titulo1">Asociando el Evento al Elemento HTML con JS</h1>
     <br />
+    <h2 id="nuevoContenido">Pulsa para Nuevo Contenido</h2>
+    <div id="mostrarContenido"></div>
     <button onclick="mostrar()">Mostrar</button>
 
     <script src="script.js"></script>
