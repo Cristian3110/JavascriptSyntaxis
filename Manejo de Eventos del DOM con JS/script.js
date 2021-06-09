@@ -26,3 +26,11 @@ function naranjaO(subtitulo){
 function verde(titulo){
     titulo.style.color = '#14746f'
 }
+
+function cambiar(elementoInput){
+    elementoInput.style.background = "#023e8a";
+}
+
+function regresar(elementoInput){
+    elementoInput.style.background = "white";
+}
