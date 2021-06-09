@@ -34,3 +34,21 @@ function cambiar(elementoInput){
 function regresar(elementoInput){
     elementoInput.style.background = "white";
 }
+
+// Cambio en los elementos email
+document.getElementById('email').addEventListener('focus',cambiar);
+document.getElementById('email').addEventListener('blur',devolver);
+
+//cambios en el elemento pais
+document.getElementById('pais').addEventListener('focus',cambiar);
+document.getElementById('pais').addEventListener('blur',devolver);
+
+function cambiar(evento){
+    let componente = evento.target;
+    componente.style.background = '#023e8a';
+}
+
+function devolver(evento){
+    let componente = evento.target;
+    componente.style.background = 'white';
+}
