@@ -27,11 +27,12 @@ function verde(titulo) {
   titulo.style.color = "#14746f";
 }
 
-function cambiar(elementoInput) {
+// onfocus and onblur
+function cambiarNA(elementoInput) {
   elementoInput.style.background = "#023e8a";
 }
 
-function regresar(elementoInput) {
+function regresarNA(elementoInput) {
   elementoInput.style.background = "white";
 }
 
@@ -69,3 +70,27 @@ document
     "blur",
     (evento) => (evento.target.style.background = "white")
   );
+
+/*****************************************************************
+ * Ahora haremos una simplificación de todo el código anterior, ya que si lo tratamos en un
+ * formulario podemos aplicarlo para cada uno de los elementos de manera general
+ * Al final se debe colocar el True, para que se aplique a los elementos hijos del formulario
+ **************************************************************/
+
+const formulario = document.getElementById("formulario");
+
+formulario.addEventListener(
+  "focus",
+  (event) => {
+    event.target.style.background = "#bdb2ff";
+  },
+  true
+);
+
+formulario.addEventListener(
+  "blur",
+  (event) => {
+    event.target.style.background = "white";
+  },
+  true
+);

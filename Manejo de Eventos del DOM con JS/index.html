@@ -9,7 +9,8 @@
   <body>
     <h1>Manejo de Eventos DOM con JS</h1>
     <br />
-    <h2 id="titulo">Manejo de Eventos</h2>
+    <h2>Manejo de Eventos</h2>
+
     Nombre: <input type="text" id="nombre" onchange="convertir()" />
     <br />
     <h2>Manejo de Eventos 2 ejemplo</h2>
@@ -25,16 +26,29 @@
     <br />
     <h2>Eventos Onfocus & onblur con javascript</h2>
     Nombre:
-    <input type="text" onfocus="cambiar(this)" onblur="regresar(this)" />
+    <input type="text" onfocus="cambiarNA(this)" onblur="regresarNA(this)" />
     <br /><br />
     Apellido:
-    <input type="text" onfocus="cambiar(this)" onblur="regresar(this)" />
+    <input type="text" onfocus="cambiarNA(this)" onblur="regresarNA(this)" />
     <br />
     <h2>Evento addEventListener en Javascript</h2>
     Email: <input type="text" id="email" /> <br /><br />
     País: <input type="text" id="pais" />
     <h3>Aplicando Arrow Function</h3>
     Estado: <input type="text" id="estado" />
+
+    <!--Realizando los mismo pero de manera global con la etiqueta form-->
+
+    <form id="formulario" action="">
+      <h2>
+        Delegación de Eventos con Javascript de manera Global a través de Form
+      </h2>
+      nombre: <input id="nombreF" type="text" /> <br /><br />
+      apellido: <input type="text" id="apellidoF" /> <br /><br />
+      país: <input type="text" id="paisF" /> <br /><br />
+      email:<input type="text" id="emailF" />
+    </form>
+
     <script src="script.js"></script>
   </body>
 </html>
