@@ -27,3 +27,14 @@ function nuevoContenido() {
 }
 
 // éstas son funciones de estilo CallBack
+
+function entrar(){
+    alert('Entrando a la Página Web');
+    let text = '';
+    if(navigator.cookieEnabled){
+        text = 'Las Cookies están habilitadas';
+    }else{
+        text ='Las cookies están inhabilitadas';
+    }
+    document.getElementById('mostrarContenido').innerHTML = text;
+}
