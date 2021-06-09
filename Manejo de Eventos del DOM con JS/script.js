@@ -15,3 +15,14 @@ function purpura(subtitulo){
 function blue(subtitulo){
     subtitulo.style.color = "#4895ef"
 }
+
+function azulO(subtitulo){
+    subtitulo.style.color = '#03045e';
+}
+function naranjaO(subtitulo){
+    subtitulo.style.color = "#e85d04"
+}
+
+function verde(titulo){
+    titulo.style.color = '#14746f'
+}
