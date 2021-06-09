@@ -8,3 +8,10 @@ function convertir(){
 function convertir2(apellidoInput){
     apellidoInput.value = apellidoInput.value.toUpperCase();
 }
+
+function purpura(subtitulo){
+    subtitulo.style.color = '#560bad';
+}
+function blue(subtitulo){
+    subtitulo.style.color = "#4895ef"
+}
