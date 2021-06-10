@@ -8,5 +8,8 @@ function sumar() {
   let operandoB = forma["operandoB"];
   // Conviertiendo los valores a enteros con ParseInt
   let resultado = parseInt(operandoA.value) + parseInt(operandoB.value);
+  if(isNaN(resultado)) {
+    resultado = "La operación no incluye números";
+  }
   document.getElementById("resultado").innerHTML = `Resultado: ${resultado}`;
 }
