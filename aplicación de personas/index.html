@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Aplicación de Personas</title>
-</head>
-<body>
-    
-    <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Listado de Personas</title>
+  </head>
+  <body onload="mostrarPersonas()">
+    <div class="contenedor" id="cabecero">
+      <h1>Listado de Personas</h1>
+    </div>
+    <div class="contenedor">
+      <div class="elemento">
+          <ul id="personas">
+              <!-- <li>Juan Perez</li> -->
+          </ul>
+      </div>
+    </div>
+
+    <!--Primero se relaciona el archivo que no tiene dependencia-->
+    <script src="/aplicación de personas/js/persona.js"></script>
+    <script src="/aplicación de personas/js/app.js"></script>
+  </body>
 </html>
