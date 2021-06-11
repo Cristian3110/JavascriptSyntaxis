@@ -36,6 +36,10 @@ const mostrarReloj = () => {
   let fechaTexto = `${diaSemana}, ${dia} ${mes}`;
 
   document.getElementById("fecha").innerHTML = fechaTexto;
+
+  // configurando el estilo de act/des el borde de nuestro reloj
+  document.getElementById('contenedor').classList.toggle('animar');
+
 };
 
 // configurando los digitos en el formato
